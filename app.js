@@ -15,7 +15,7 @@ app.get('/execute', async (req, res) => {
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
         await page.goto('https://tarek.kesug.com/sendImage.php');
-        await page.screenshot({ path: 'example.png' });
+        
         await browser.close();
 
         res.send('Puppeteer script executed successfully!');
